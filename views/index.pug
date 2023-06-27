@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+  //- Loop Over Posts
+  div(class="card mx-auto mt-5" style="width: 350px;")
+    -posts.forEach(post => {
+      div(id="break", class="card-body p-3")
+        h1= post.title
+        p= post.body
+        p= post.author
+        p= post.id
+        a(href=(`/details/${post._id}`)) Show Details
+        br
+    -})
+    br

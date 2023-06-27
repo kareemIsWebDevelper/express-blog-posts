@@ -1,0 +1,15 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: white;
+}
+
+label {
+  display: block;
+}
+
+.break {
+  margin: 20px 0;
+}

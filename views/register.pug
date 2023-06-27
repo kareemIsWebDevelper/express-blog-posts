@@ -1,0 +1,31 @@
+extends layout 
+
+block content 
+     div(class="card p-3 mx-auto mt-5" style="width: 350px;")
+          form(method="POST")
+               h1(class="text-center") Join Us
+               div(class="form-group")
+                    label(for="username") Username:
+                    input(type="text", class="form-control" name="username" id="username" placeholder="Enter your name")
+               div(class="form-group")
+                    label(for="email") Email:
+                    input(type="email", class="form-control" name="email" id="email" placeholder="Enter your email")
+               div(class="form-group")
+                    label(for="pwd") Password:
+                    input(type="text", class="form-control" name="pwd" id="pwd" placeholder="Enter yout password")
+               button(type="submit", class="btn btn-info mt-2") Register
+               div(class="d-flex gap-2 mt-3")
+                    p(class="text-secondary") Back to
+                    a(href=("/login")) Login
+
+     script.
+          form = document.querySelector("form");
+
+          form.addEventListener("submit", (e) => {
+               e.preventDefault();
+               const username = form.username.value;
+               const email = form.email.value;
+               const pwd = form.pwd.value;
+               
+               console.log(username + email + pwd);
+          });
